@@ -24,8 +24,6 @@ app.get("/api/movies/:id", movieHandlers.getMovieById);
 // public routes for users
 app.get("/api/users", userHandlers.getUsers);
 app.get("/api/users/:id", userHandlers.getUserById);
-
-// public routes for users 
 app.post("/api/login", userHandlers.getUserByEmailWithPasswordAndPassToNext,
 verifyPassword);
 app.post("/api/users", hashPassword, userHandlers.postUser);
